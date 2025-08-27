@@ -1,0 +1,32 @@
+AMAZON INVOICE
+
+Order #: 123-4567890- 1234567 Invoice #: IN-2025-08-22-001
+Order Date: Aug 22, 2025 Sold by: Amazon (Sample)
+Bill To Ship To
+
+Prashant Kaimwal Prashant Kaimwal
+
+123 King Street W 123 King Street W
+
+Kitchener, ON N2G 1A3 Kitchener, ON N2G 1A3
+
+Canada Canada
+
+ker—_ HAAA—M™ i t—_—_\qoJa\>_i “——_eytfrice—
+
+Anker USB-C Cable (2-Pack, 6ft) B07H27J698 1 $12.99
+
+SanDisk 128GB Ultra microSDXC UHS-1BG73IWXGNT 1 $17.49
+
+Echo Dot (Sth Gen, Charcoal) BOSB2SBFPZ 1 $49.99
+Subto®sd: 47
+
+Shippingsd.00
+oss Ohh IEE SLOG ——
+
+Tota .93
+
+Payment Method: VISA e*** 1234
+This 15 a sample invoice generated for testing OCR. Not a real purchase
+
+Need help? Visit: www.amazon.com/help (sample)

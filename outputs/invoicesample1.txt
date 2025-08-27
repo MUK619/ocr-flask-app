@@ -1,0 +1,28 @@
+ATTENTION TO
+
+Denny Gunawan
+
+221 Queen St
+Melbourne VIC 3000
+
+123 Somewhere St, Melbourne VIC 3000 $39 . 60
+
+(03) 1234 5678
+
+Invoice Number: #20130304
+
+Organic Items Price/kg Quantity(kg) Subtotal
+Apple $5.00 1 $5.00
+Orange $1.99 2 $3.98
+Watermelon $1.69 3 $5.07
+Mango $9.56 2 $19.12
+Peach $2.99 1 $2.99
+
+Subtotal $36.00
+
+THANK YOU =»
+
+Total $39.60
+
+
+
