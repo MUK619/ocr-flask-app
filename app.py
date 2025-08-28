@@ -11,6 +11,7 @@ import shutil
 from pdf2image import convert_from_path
 from PIL import Image
 from pdf2image.exceptions import PDFInfoNotInstalledError,PDFPageCountError
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 
 
