@@ -1,6 +1,6 @@
 Flask==2.3.2
 gunicorn==21.2.0
-opencv-python==4.8.0.74
+opencv-python-headless==4.12.0.88
 pytesseract==0.3.10
 pdf2image==1.17.0
 Pillow==10.0.0
