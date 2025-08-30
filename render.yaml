@@ -8,12 +8,12 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
-      - key: TESSDATA_PREFIX
-        value: /usr/share/tesseract-ocr/4.00/tessdata
     packages:
       apt:
         - tesseract-ocr
         - tesseract-ocr-eng
         - poppler-utils
-        - libgl1
         - libglib2.0-0
+        - libsm6
+        - libxrender1
+        - libxext6
