@@ -8,12 +8,10 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.9
+      - key: TESSERACT_PATH
+        value: /usr/bin/tesseract
     packages:
       apt:
         - tesseract-ocr
         - tesseract-ocr-eng
         - poppler-utils
-        - libglib2.0-0
-        - libsm6
-        - libxrender1
-        - libxext6
