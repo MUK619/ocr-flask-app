@@ -14,12 +14,7 @@ if platform.system() == "Windows":
     # Windows local path (update if yours is different)
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 else:
-    # Linux/Render auto-detect
-    tesseract_path = shutil.which("tesseract")
-    if tesseract_path:
-        pytesseract.pytesseract.tesseract_cmd = tesseract_path
-    else:
-        pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
 
 # -----------------------------
 # Flask setup
