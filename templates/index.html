@@ -1,42 +1,52 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OCR App — Day 2</title>
-  <style>
-    body{margin:0;display:grid;place-items:center;height:100vh;background:#0d1117;color:#e6edf3;font-family:system-ui;}
-    .card{background:#161b22;padding:24px;border-radius:12px;max-width:800px;width:95%;box-shadow:0 8px 24px rgba(0,0,0,.6);}
-    h1{margin-top:0;}
-    .row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;}
-    input[type=file],select{background:#0d1117;color:#e6edf3;border:1px solid #30363d;padding:8px;border-radius:6px;flex:1;}
-    .btn{background:#238636;border:none;padding:10px 16px;border-radius:6px;color:#fff;font-weight:bold;cursor:pointer;}
-    .btn:disabled{background:#30363d;}
-    textarea{width:100%;min-height:240px;background:#0d1117;color:#e6edf3;border:1px solid #30363d;padding:12px;border-radius:8px;}
-    .error{color:#ff7b72;font-weight:bold;}
-    .dropzone{margin-top:10px;padding:20px;border:2px dashed #30363d;text-align:center;border-radius:8px;}
-    .dropzone.drag{border-color:#58a6ff;background:#0c162d;}
-  </style></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OCR Text Extraction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            text-align: center;
+            background: #f4f4f9;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            margin: 20px 0;
+        }
+        pre {
+            text-align: left;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ccc;
+            width: 80%;
+            max-width: 800px;
+            background: #fff;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        button {
+            padding: 10px 15px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: darkgreen;
+        }
+    </style>
+</head>
 <body>
-  <div class="card">
-    <h1>OCR Text Extraction — Day 2</h1>
-    <form id="form" action="/" method="POST" enctype="multipart/form-data">
-      <div class="row">
-        <input type="file" name="file" id="file" accept="image/*,.pdf" required>
-        <select name="lang"><option value="eng">English</option><option value="hin">Hindi</option><option value="deu">German</option><option value="fra">French</option></select>
-        <label><input type="checkbox" name="enhance"> Enhance</label>
-        <button class="btn" id="btn" type="submit">Upload & Extract</button>
-      </div>
-      <div id="dz" class="dropzone">Drag & Drop File Here</div>
+    <h2>OCR Text Extraction</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Upload & Extract</button>
     </form>
-    {% if error %}<p class="error">{{ error }}</p>{% endif %}
-    <h2>Extracted Text</h2>
-    {% if extracted_text %}<textarea readonly>{{ extracted_text }}</textarea>{% else %}<p>No result yet.</p>{% endif %}
-    {% if download_link %}<a class="btn" href="{{ download_link }}">Download TXT</a>{% endif %}
-  </div>
-<script>
-const dz=document.getElementById('dz'),fi=document.getElementById('file'),form=document.getElementById('form'),btn=document.getElementById('btn');
-['dragenter','dragover'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.add('drag');}));
-['dragleave','drop'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();dz.classList.remove('drag');}));
-dz.addEventListener('drop',e=>{if(e.dataTransfer.files.length)fi.files=e.dataTransfer.files;});
-form.addEventListener('submit',()=>{btn.disabled=true;btn.textContent='Processing...';});
-</script>
-</body></html>
+
+    <h3>Extracted Text</h3>
+    <pre>{{ extracted_text if extracted_text else "No result yet." }}</pre>
+</body>
+</html>
